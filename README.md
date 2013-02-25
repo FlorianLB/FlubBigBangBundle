@@ -1,0 +1,1 @@
+This bundle is a simple container of various utility classes to develop your app faster.

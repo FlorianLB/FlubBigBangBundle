@@ -1,0 +1,28 @@
+{
+    "name": "flub/bigbang-bundle",
+    "description": "Utility classes for speed up your Symfony dev",
+    "type": "symfony-bundle",
+    "keywords": ["rad", "utility"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Florian Lonqueu-Brochard"
+        },
+        {
+            "name": "Florian Vilpoix"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.1.*"
+    },
+    "suggest": {
+        "knplabs/rad-bundle": "To use the classes using the KnpRadBundle (controller)"
+    },
+    "autoload": {
+        "psr-0": {
+            "Flub\\BigBangBundle": ""
+        }
+    },
+    "target-dir": "flub/BigBangBundle"
+}
