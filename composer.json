@@ -14,7 +14,7 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.1.*"
+        "symfony/symfony": "~2.1"
     },
     "suggest": {
         "knplabs/rad-bundle": "To use the classes using the KnpRadBundle (controller)"
