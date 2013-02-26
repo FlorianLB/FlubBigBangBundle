@@ -1,10 +1,10 @@
 <?php
 
-namespace Flub\BigBangBundle\Model\Traits;
+namespace Flub\BigBangBundle\Behaviour\Doctrine\ORM\Traits;
 
 use Doctrine\ORM\Mapping as ORM;
 
-trait Updateable
+trait Updatable
 {
     /**
      * @var \DateTime
@@ -24,7 +24,7 @@ trait Updateable
     /**
      * @param \DateTime $updatedAt
      *
-     * @return Updateable
+     * @return Updatable
      */
     public function setUpdatedAt(\DateTime $updatedAt = null)
     {

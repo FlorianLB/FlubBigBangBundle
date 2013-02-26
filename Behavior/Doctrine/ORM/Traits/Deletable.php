@@ -1,6 +1,6 @@
 <?php
 
-namespace Flub\BigBangBundle\Model\Traits;
+namespace Flub\BigBangBundle\Behaviour\Doctrine\ORM\Traits;
 
 use Doctrine\ORM\Mapping as ORM;
 
