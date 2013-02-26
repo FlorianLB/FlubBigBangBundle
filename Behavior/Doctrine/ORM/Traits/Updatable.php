@@ -23,8 +23,6 @@ trait Updatable
 
     /**
      * @param \DateTime $updatedAt
-     *
-     * @return Updatable
      */
     public function setUpdatedAt(\DateTime $updatedAt = null)
     {

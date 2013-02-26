@@ -23,8 +23,6 @@ trait Deletable
 
     /**
      * @param \DateTime $deletedAt
-     *
-     * @return Deletable
      */
     public function setDeletedAt(\DateTime $deletedAt = null)
     {
@@ -33,8 +31,25 @@ trait Deletable
         return $this;
     }
 
+    /**
+     * @return boolean
+     */
     public function isDeleted()
     {
-        return $this->getDeletedAt() !== null;
+        if (null !== $this->deletedAt) {
+            return $this->deletedAt <= (new \DateTime());
+        }
+
+        return false;
+    }
+
+    public function delete()
+    {
+        $this->deletedAt = new \DateTime();
+    }
+
+    public function restore()
+    {
+        $this->deletedAt = null;
     }
 }
