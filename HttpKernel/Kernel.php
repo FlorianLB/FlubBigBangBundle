@@ -18,7 +18,7 @@ abstract class Kernel extends BaseKernel
      */
     public function getVarDir()
     {
-        return $this->rootDir.'/../var/';
+        return $this->rootDir.'/../var';
     }
 
     /**
