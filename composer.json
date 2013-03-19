@@ -24,5 +24,5 @@
             "Flub\\BigBangBundle": ""
         }
     },
-    "target-dir": "flub/BigBangBundle"
+    "target-dir": "Flub/BigBangBundle"
 }
