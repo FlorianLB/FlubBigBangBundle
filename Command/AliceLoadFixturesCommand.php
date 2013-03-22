@@ -82,7 +82,7 @@ class AliceLoadFixturesCommand extends DoctrineORMCommand
             $paths[] = $fixturesDir;
         }
 
-        if (0 == count($paths)) {
+        if (0 === count($paths)) {
             return array();
         }
 
