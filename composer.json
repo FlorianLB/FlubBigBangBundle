@@ -20,6 +20,9 @@
         "knplabs/rad-bundle": "To use the classes using the KnpRadBundle (controller)",
         "nelmio/alice": "To create expressive fixtures/fake data"
     },
+    "require-dev": {
+        "composer/composer": "*"
+    },
     "autoload": {
         "psr-0": {
             "Flub\\BigBangBundle": ""
