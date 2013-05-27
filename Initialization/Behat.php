@@ -72,9 +72,10 @@ class Behat implements InitializatorInterface
 
     protected function editComposer()
     {
-        $auto = $this->input->getOption('auto-update');
+        $auto     = $this->input->getOption('auto-update');
+        $composer = class_exists('\Composer\Json\JsonFile');
 
-        if (!$auto && $this->input->isInteractive()) {
+        if (!$auto && $composer && $this->input->isInteractive()) {
             $auto = $this->dialog->askConfirmation(
                 $this->output,
                 '<info>Confirm automatic update of your <comment>composer.json</comment></info> [<comment>yes</comment>]?',
@@ -82,7 +83,7 @@ class Behat implements InitializatorInterface
             );
         }
 
-        if ($auto) {
+        if ($auto && $composer) {
             return $this->autoAddPackage();
         }
 
