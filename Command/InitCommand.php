@@ -18,7 +18,9 @@ class InitCommand extends ContainerAwareCommand
             ->setName('bigbang:init')
             ->setDescription('Init your project')
             ->addOption('auto-update', null, InputOption::VALUE_NONE, false)
-            ->addOption('behat', null, InputOption::VALUE_NONE);
+            ->addOption('behat', null, InputOption::VALUE_NONE)
+            ->addOption('ant', null, InputOption::VALUE_NONE)
+            ->addOption('jenkins', null, InputOption::VALUE_NONE, 'alias for --ant');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -31,6 +33,15 @@ class InitCommand extends ContainerAwareCommand
                 $this->getHelperSet()->get('dialog')
             );
             $behatInitializator->execute();
+        }
+
+        if ($input->getOption('ant') || $input->getOption('jenkins')) {
+            $antInitializator = new Init\Ant(
+                $input,
+                $output,
+                $this->getContainer()->get('kernel')
+            );
+            $antInitializator->execute();
         }
     }
 }
