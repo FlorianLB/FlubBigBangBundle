@@ -6,6 +6,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Console\Helper\DialogHelper;
+use Symfony\Component\Filesystem\Filesystem;
 
 use Composer\Json\JsonFile;
 use Composer\Json\JsonManipulator;
@@ -60,13 +61,12 @@ class Behat implements InitializatorInterface
         }
 
         if (!file_exists($rootDir.'/features')) {
-            $featureSubPath = '/features/Context/FeatureContext.php';
-            $contextFile    = $this->kernel->locateResource(static::BEHAT_ROOT_DIR.$featureSubPath);
+            $filesystemUtils = new Filesystem();
+            $featuresDirName = static::BEHAT_ROOT_DIR.'/features';
+            $featuresDir = $this->kernel->locateResource($featuresDirName);
 
-            mkdir($rootDir.'/features/Context', 0777, true);
-            if (copy($contextFile, $rootDir.$featureSubPath)) {
-                $this->output->writeln('<info>[OK]</info> "features" directory added');
-            }
+            $filesystemUtils->mirror($featuresDir, $rootDir.'/features');
+            $this->output->writeln('<info>[OK]</info> "features" directory added');
         }
     }
 
