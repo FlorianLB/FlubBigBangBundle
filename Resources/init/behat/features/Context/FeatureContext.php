@@ -12,20 +12,9 @@ use Behat\Symfony2Extension\Context\KernelAwareInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Doctrine\Common\Util\Inflector;
 
-use App\Entity;
-
 class FeatureContext extends RawMinkContext implements KernelAwareInterface
 {
     private $kernel;
-
-    /**
-     * @Given /^I am on the ([\w\s]+)( page)?$/
-     * @When /^I go to the ([\w\s]+)( page)?$/
-     */
-    public function iAmOnThePage($page)
-    {
-        $this->getSession()->visit($this->generatePageUrl($page, $parameters));
-    }
 
     /**
      * Sets Kernel instance.
@@ -59,30 +48,5 @@ class FeatureContext extends RawMinkContext implements KernelAwareInterface
     private function generateUrl($route, array $parameters = array(), $absolute = false)
     {
         return $this->getContainer()->get('router')->generate($route, $parameters, $absolute);
-    }
-
-    /**
-     * Generate page url from name and parameters.
-     *
-     * @param string $page
-     * @param array  $parameters
-     *
-     * @return string
-     */
-    private function generatePageUrl($page, array $parameters = array())
-    {
-        $parts = explode(' ', trim($page), 2);
-        if (2 === count($parts)) {
-            $parts[1] = Inflector::camelize($parts[1]);
-        }
-
-        $route  = implode('_', $parts);
-        $routes = $this->getContainer()->get('router')->getRouteCollection();
-
-        if (null === $routes->get($route)) {
-            $route = 'app_'.$route;
-        }
-
-        return $this->getMinkParameter('base_url').$this->generateUrl($route, $parameters);
     }
 }

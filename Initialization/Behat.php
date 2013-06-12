@@ -91,7 +91,7 @@ class Behat implements InitializatorInterface
 
         $this->output->writeln(<<<'COMPOSER'
     "require-dev": {
-        "behat/behat</comment>": "2.4.*",
+        "behat/behat": "2.4.*",
         "behat/symfony2-extension": "*",
         "behat/mink-extension": "*",
         "behat/mink-browserkit-driver": "*"
