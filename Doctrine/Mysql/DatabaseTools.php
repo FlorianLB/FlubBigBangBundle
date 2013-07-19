@@ -32,7 +32,7 @@ class DatabaseTools
 
     protected function reset()
     {
-        $this->truncatedTables = [];
+        $this->truncatedTables = array();
     }
 
     public function truncateAll()
@@ -45,7 +45,7 @@ class DatabaseTools
      */
     public function truncateEntities(array $entitiesNames)
     {
-        $metadatas = [];
+        $metadatas = array();
         foreach ($entitiesNames as $entity) {
             $metadatas[] = $this->om->getMetadataFactory()->getMetadataFor($entity);
         }
