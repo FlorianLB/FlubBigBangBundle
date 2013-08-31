@@ -26,22 +26,33 @@ class InitCommand extends ContainerAwareCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         if ($input->getOption('behat')) {
-            $behatInitializator = new Init\Behat(
-                $input,
-                $output,
-                $this->getContainer()->get('kernel'),
-                $this->getHelperSet()->get('dialog')
-            );
-            $behatInitializator->execute();
+            $this->execBehat($input, $output);
         }
 
         if ($input->getOption('ant') || $input->getOption('jenkins')) {
-            $antInitializator = new Init\Ant(
-                $input,
-                $output,
-                $this->getContainer()->get('kernel')
-            );
-            $antInitializator->execute();
+            $this->execAnt($input, $output);
         }
     }
+
+    protected function execBehat(InputInterface $input, OutputInterface $output)
+    {
+        $behatInitializator = new Init\Behat(
+            $input,
+            $output,
+            $this->getContainer()->get('kernel'),
+            $this->getHelperSet()->get('dialog')
+        );
+        $behatInitializator->execute();
+    }
+
+    protected function execAnt(InputInterface $input, OutputInterface $output)
+    {
+        $antInitializator = new Init\Ant(
+            $input,
+            $output,
+            $this->getContainer()->get('kernel')
+        );
+        $antInitializator->execute();
+    }
+
 }
