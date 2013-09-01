@@ -5,6 +5,7 @@ namespace Flub\BigBangBundle\Tests\Fixtures\HttpKernel;
 use Flub\BigBangBundle\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Flub\BigBangBundle\Initialization\Ant as AntInit;
+use Flub\BigBangBundle\Initialization\Behat as BehatInit;
 
 class FileKernel extends BaseKernel
 {
@@ -29,6 +30,12 @@ class FileKernel extends BaseKernel
                 break;
             case AntInit::ANT_ROOT_DIR . '/build' :
                 return __DIR__ . '/../../../Resources/init/ant/build';
+                break;
+            case BehatInit::BEHAT_ROOT_DIR . '/behat.yml' :
+                return __DIR__ . '/../../../Resources/init/behat/behat.yml';
+                break;
+            case BehatInit::BEHAT_ROOT_DIR . '/features' :
+                return __DIR__ . '/../../../Resources/init/behat/features';
                 break;
             default :
                 return parent::locateResource($name, $dir, $first);
