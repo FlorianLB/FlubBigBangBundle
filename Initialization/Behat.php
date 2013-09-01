@@ -114,17 +114,17 @@ COMPOSER
         $file = $this->kernel->getRootDir().'/../composer.json';
 
         if (!file_exists($file)) {
-            $output->writeln('<error>'.$file.' does not exists.</error>');
+            $this->output->writeln('<error>'.$file.' does not exists.</error>');
 
             return false;
         }
         if (!is_readable($file)) {
-            $output->writeln('<error>'.$file.' is not readable.</error>');
+            $this->output->writeln('<error>'.$file.' is not readable.</error>');
 
             return false;
         }
         if (!is_writable($file)) {
-            $output->writeln('<error>'.$file.' is not writable.</error>');
+            $this->output->writeln('<error>'.$file.' is not writable.</error>');
 
             return false;
         }
