@@ -2,9 +2,7 @@
 
 namespace Flub\BigBangBundle\Controller;
 
-use Knp\RadBundle\Controller\Controller as KnpController;
-
-class ResourceOrientedController extends KnpController
+class ResourceOrientedController extends Controller
 {
     /**
      * The base entity that this controller will manage

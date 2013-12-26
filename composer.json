@@ -7,17 +7,13 @@
     "authors": [
         {
             "name": "Florian Lonqueu-Brochard"
-        },
-        {
-            "name": "Florian Vilpoix"
         }
     ],
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "~2.1"
+        "symfony/symfony": "~2.3"
     },
     "suggest": {
-        "knplabs/rad-bundle": "To use the classes using the KnpRadBundle (controller)",
         "nelmio/alice": "To create expressive fixtures/fake data",
         "composer/composer": "To use automatic update of the init command"
     },
