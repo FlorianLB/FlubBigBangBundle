@@ -26,5 +26,10 @@
             "Flub\\BigBangBundle": ""
         }
     },
-    "target-dir": "Flub/BigBangBundle"
+    "target-dir": "Flub/BigBangBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
 }
