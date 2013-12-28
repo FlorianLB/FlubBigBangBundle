@@ -59,13 +59,13 @@ class AliceLoadFixturesCommand extends DoctrineORMCommand
                continue;
             }
 
-            $output->writeln(
-                sprintf("<info>[OK]</info> %s (%d files)", $bundle->getName(), $nbFiles)
-            );
-
             foreach ($files as $file) {
                 Fixtures::load($file, $em, $this->getAliceOptions());
             }
+
+            $output->writeln(
+                sprintf("<info>[OK]</info> %s (%d files)", $bundle->getName(), $nbFiles)
+            );
         }
     }
 
