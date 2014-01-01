@@ -2,15 +2,10 @@
 
 namespace Context;
 
-use Behat\Behat\Exception\PendingException;
-use Behat\Gherkin\Node\PyStringNode;
-use Behat\Gherkin\Node\TableNode;
-
 use Behat\MinkExtension\Context\RawMinkContext;
 use Behat\Symfony2Extension\Context\KernelAwareInterface;
 
 use Symfony\Component\HttpKernel\KernelInterface;
-use Doctrine\Common\Util\Inflector;
 
 class FeatureContext extends RawMinkContext implements KernelAwareInterface
 {
