@@ -19,6 +19,6 @@ class ResourceOrientedController extends Controller
             throw new \Exception('You must define a baseEntity for a resource oriented controller');
         }
 
-        return $this->getEntityManager()->getRepository($this->baseEntity);
+        return parent::getRepository($this->baseEntity);
     }
 }
