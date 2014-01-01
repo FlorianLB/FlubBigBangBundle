@@ -4,6 +4,7 @@ namespace Flub\BigBangBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller as BaseController;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+use Doctrine\ORM\EntityRepository;
 
 class Controller extends BaseController
 {
