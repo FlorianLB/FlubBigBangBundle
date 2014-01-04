@@ -10,7 +10,7 @@ into your `composer.json` file:
 ``` json
 {
     "require": {
-        "flub/bigbang-bundle": "@stable"
+        "flub/bigbang-bundle": "0.1.0"
     }
 }
 ```
