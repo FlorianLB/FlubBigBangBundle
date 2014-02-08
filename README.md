@@ -28,5 +28,14 @@ For installation, see:
 
     Resources/doc/install.md
 
-[&rarr; Read the
-installation documentation](Resources/doc/install.md)
+[&rarr; Read the installation documentation](Resources/doc/install.md)
+
+
+Documentation
+------------
+
+For installation, see:
+
+    Resources/doc
+
+[&rarr; Read the documentation](Resources/doc/index.md)
