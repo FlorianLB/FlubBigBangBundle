@@ -1,6 +1,8 @@
 FlubBigBangBundle
 =================
 
+[![Latest Stable Version](https://poser.pugx.org/flub/bigbang-bundle/v/stable.png)](https://packagist.org/packages/flub/bigbang-bundle) [![License](https://poser.pugx.org/flub/bigbang-bundle/license.png)](https://packagist.org/packages/flub/bigbang-bundle)
+
 [![Build Status](https://api.travis-ci.org/FlorianLB/FlubBigBangBundle.png?branch=master)](https://travis-ci.org/FlorianLB/FlubBigBangBundle) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/16e7cea1-4baa-42f0-95fe-77fce94633bb/mini.png)](https://insight.sensiolabs.com/projects/16e7cea1-4baa-42f0-95fe-77fce94633bb) [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/FlorianLB/FlubBigBangBundle/badges/quality-score.png?s=a63e8cd09f48879781a134bdc069e31c804ca3e8)](https://scrutinizer-ci.com/g/FlorianLB/FlubBigBangBundle/) [![Code Coverage](https://scrutinizer-ci.com/g/FlorianLB/FlubBigBangBundle/badges/coverage.png?s=1db1c3b18a3d9cdb8518d48b587e5c23875cfb4e)](https://scrutinizer-ci.com/g/FlorianLB/FlubBigBangBundle/)
 
 This bundle is a simple container of various utility classes to develop your app faster.
