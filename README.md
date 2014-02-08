@@ -14,7 +14,7 @@ This bundle brings :
 - a [base controller](https://github.com/FlorianLB/FlubBigBangBundle/blob/master/Controller/Controller.php) with many shortcuts
 - a [resource oriented controller](https://github.com/FlorianLB/FlubBigBangBundle/blob/master/Controller/ResourceOrientedController.php)
 - a command to load your [Alice](https://github.com/nelmio/alice) fixtures (`php app/console alice:fixtures:load fixtures_dir`)
-- a command to initialize environnement for various tools (Jenkins, Behat)
+- a command to initialize environnement for various tools (Ant/Jenkins only atm)
 
 ----------
 
