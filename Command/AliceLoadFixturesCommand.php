@@ -31,7 +31,7 @@ class AliceLoadFixturesCommand extends DoctrineORMCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $em = $this->getContainer()->get('doctrine')->getManager();
+        $entityManager = $this->getContainer()->get('doctrine')->getManager();
 
         if (!$input->getOption('append')
             && !$input->getOption('drop-schema')
@@ -60,7 +60,7 @@ class AliceLoadFixturesCommand extends DoctrineORMCommand
             }
 
             foreach ($files as $file) {
-                Fixtures::load($file, $em, $this->getAliceOptions());
+                Fixtures::load($file, $entityManager, $this->getAliceOptions());
             }
 
             $output->writeln(
