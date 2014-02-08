@@ -37,9 +37,9 @@ class Ant implements InitializatorInterface
         $rootDir = $this->kernel->getRootDir().'/..';
 
         if (!file_exists($rootDir.'/build.xml')) {
-            $behatFile = $this->kernel->locateResource(static::ANT_ROOT_DIR.'/build.xml');
+            $buildFile = $this->kernel->locateResource(static::ANT_ROOT_DIR.'/build.xml');
 
-            if (copy($behatFile, $rootDir.'/build.xml')) {
+            if (copy($buildFile, $rootDir.'/build.xml')) {
                 $this->output->writeln('<info>[OK]</info> "build.xml" added');
             }
         }
