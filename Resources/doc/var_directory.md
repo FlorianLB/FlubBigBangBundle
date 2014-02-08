@@ -20,6 +20,8 @@ This bundle allow you to change the standard way to store cache and log files pu
 It's easy to adopt this architecture. Just make your AppKernel extends the `Flub\BigBangBundle\HttpKernel\Kernel`.
 
 ```php
+# app/AppKernel.php
+
 // ...
 
 use Flub\BigBangBundle\HttpKernel\Kernel as KernelWithVarDirectory;
