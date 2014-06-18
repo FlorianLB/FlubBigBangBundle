@@ -23,11 +23,6 @@ class Controller extends BaseController
         return $this->getSecurity()->isGranted($attributes, $object);
     }
 
-    protected function createAccessDeniedException($message = 'Access Denied', \Exception $previous = null)
-    {
-        return new AccessDeniedException($message, $previous);
-    }
-
     protected function getEntityManager()
     {
         return $this->getDoctrine()->getManager();

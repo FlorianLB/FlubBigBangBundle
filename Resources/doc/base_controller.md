@@ -19,7 +19,6 @@ Shortcuts
 ### Security
 * `getSecurity()` : return the `security.context` service
 * `isGranted()` : proxy method for `isGranted` method of the `security.context`
-* `createAccessDeniedException($message = 'Access Denied', \Exception $previous = null)` : throw an Symfony\Component\Security\Core\Exception\AccessDeniedException`.
 
 ### ORM
 * `getEntityManager()` : return the default entity manager
